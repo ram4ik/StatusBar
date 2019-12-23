@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Light View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LightViewController" customModule="StatusBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i23-rk-Ag0">
+                                <rect key="frame" x="77" y="742" width="260" height="50"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="29p-QV-gOc"/>
+                                    <constraint firstAttribute="height" constant="50" id="T4N-Go-9gG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Show Dark">
+                                    <color key="titleColor" red="0.99939221140000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0cb-0L-Ca2" kind="presentation" id="Fdt-Td-03k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89206124518521368" green="0.8720407108675351" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i23-rk-Ag0" secondAttribute="bottom" constant="70" id="AW4-Qo-IDh"/>
+                            <constraint firstItem="i23-rk-Ag0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WwR-IG-Kro"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NrM-XS-4ez"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--Dark View Controller-->
+        <scene sceneID="2wk-K2-V7E">
+            <objects>
+                <viewController id="0cb-0L-Ca2" customClass="DarkViewController" customModule="StatusBar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cVm-dH-AXp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dua-wV-san">
+                                <rect key="frame" x="77" y="742" width="260" height="50"/>
+                                <color key="backgroundColor" red="0.99939221140000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="FTw-fR-KCW"/>
+                                    <constraint firstAttribute="height" constant="50" id="SDP-JS-Jnm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonTapped:" destination="0cb-0L-Ca2" eventType="touchUpInside" id="gxg-IH-Ut6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THc-Uq-vip">
+                                <rect key="frame" x="77" y="642" width="260" height="50"/>
+                                <color key="backgroundColor" red="0.99939221140000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="82f-Ik-z1f"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="260" id="Cbi-lm-ne2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Update Status Bar">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateStatusBarButtonTapped:" destination="0cb-0L-Ca2" eventType="touchUpInside" id="Lep-H6-lVb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.087138045075206547" green="0.008312464258756742" blue="0.58791839454976302" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="THc-Uq-vip" firstAttribute="centerX" secondItem="cVm-dH-AXp" secondAttribute="centerX" id="7to-2t-GmD"/>
+                            <constraint firstItem="dua-wV-san" firstAttribute="centerX" secondItem="cVm-dH-AXp" secondAttribute="centerX" id="GPd-z9-hT0"/>
+                            <constraint firstItem="dua-wV-san" firstAttribute="top" secondItem="THc-Uq-vip" secondAttribute="bottom" constant="50" id="WHS-cu-ew2"/>
+                            <constraint firstItem="g46-i9-Udq" firstAttribute="bottom" secondItem="dua-wV-san" secondAttribute="bottom" constant="70" id="uCs-Lq-vQO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g46-i9-Udq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j98-uo-Mrn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="138"/>
+        </scene>
+    </scenes>
+</document>
